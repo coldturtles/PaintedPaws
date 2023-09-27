@@ -17,6 +17,11 @@ public class IslandInventory : MonoBehaviour
         }
         
     }
+    public void AddRecipe(IslandItem item)
+    {
+        if (craftableRecipes.Contains(item) == false)
+            craftableRecipes.Add(item);
+    }
     public bool CheckForRecipe(IslandItem item)
     {
         foreach (IslandItem i in craftableRecipes)
